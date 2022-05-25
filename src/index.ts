@@ -1,18 +1,22 @@
-const datoUsuario1 = [];
-const datoUsuario2 = [];
+const array1 = [];
+const array2 = [];
 for (let i = 0; i <= 5; i++) {
-  let usuario1 = prompt("Ingrese el primer número");
-  datoUsuario1.push(usuario1);
-  let usuario2 = prompt("Ingrese el segundo número");
-  datoUsuario2.push(usuario2);
+  let datoArreglo1 = Number(
+    prompt("Arreglo1: Ingrese el " + (i + 1) + " número")
+  );
+  array1.push(datoArreglo1);
+  let datoArreglo2 = Number(
+    prompt("Arreglo2: Ingrese el " + (i + 1) + " número")
+  );
+  array2.push(datoArreglo2);
 }
-const sumarDatosUsuarios = (datoUsuario1, datoUsuario2) => {
+const sumarDatosUsuarios = (array1, array2) => {
   let suma = 0;
   let arraySuma = [];
-  for (let j = 0; j < datoUsuario1.length; j++) {
-    suma = datoUsuario1[j] + datoUsuario2[j];
+  for (let j = 0; j < array1.length; j++) {
+    suma = array1[j] + array2[j];
     arraySuma.push(suma);
   }
   return arraySuma;
 };
-console.log(sumarDatosUsuarios(datoUsuario1, datoUsuario2));
+console.log(sumarDatosUsuarios(array1, array2));
